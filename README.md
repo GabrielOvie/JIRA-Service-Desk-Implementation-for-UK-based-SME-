@@ -1,4 +1,5 @@
-# Enterprise Network-Implementation for a small to mid-size business
+# Enterprise Network-Implementation.
+500 Users, 5 VLANs, 1 Bulletproof Network
 ### Project Objective
 Design, implement, and optimize a secure, high-performance network infrastructure for a growing mid-sized company with 500 users across multiple departments, supporting both on-site and remote work environments. The project aims to improve network security, performance, and manageability while accommodating future growth.
 
