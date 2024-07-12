@@ -1,7 +1,6 @@
-# Network-Infrastructure-Project
+# Enterprise Network-Implementation for a small to mid-size business
 ### Project Objective
-This project involves the design, implementation, and management of a comprehensive home lab network infrastructure. 
-A fully functional, secure, and scalable network environment that showcases proficiency in setting up LANs, configuring network devices, and implementing VPNs. The setup mimics a small to medium-sized business environment, demonstrating practical skills in network configuration, security implementation, and system administration.
+Design, implement, and optimize a secure, high-performance network infrastructure for a growing mid-sized company with 500 users across multiple departments, supporting both on-site and remote work environments. The project aims to improve network security, performance, and manageability while accommodating future growth.
 
 #**End Goals**
 - A fully operational LAN with proper segmentation and security measures.
