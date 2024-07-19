@@ -1,0 +1,21 @@
+# Challenges and Solutions
+
+This document outlines key challenges faced during the JIRA Service Desk virtual lab implementation and how they were addressed.
+
+## 1. Limited System Resources
+
+**Challenge:** The virtual machine was initially slow to respond due to limited allocated resources.
+
+**Solution:** Increased VM RAM from 2GB to 4GB and added an additional virtual CPU core. This significantly improved JIRA's performance.
+
+## 2. Email Integration Complexity
+
+**Challenge:** Setting up a functioning email integration for ticket creation and updates in a lab environment.
+
+**Solution:** Utilized Postfix as a local SMTP server and configured JIRA to use it. Created a catch-all email address for testing various email-to-ticket scenarios.
+
+## Lessons Learned
+
+1. Always start with more system resources than you think you'll need. It's easier to scale down than to troubleshoot performance issues.
+2. Use simplified, local solutions for complex integrations in a lab environment. This allows focus on core functionality without external dependencies.
+3. Thorough documentation of the setup process is crucial. It helps in troubleshooting and serves as a valuable resource for future reference or when explaining the project to others.
