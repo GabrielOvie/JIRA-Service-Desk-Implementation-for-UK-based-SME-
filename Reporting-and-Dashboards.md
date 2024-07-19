@@ -1,27 +1,53 @@
-## Reporting and Dashboards ##
+# Reporting and Dashboards in JIRA Service Desk
 
-1. Create Custom Dashboard
-   - Go to Dashboards > Create Dashboard
-   - Name it "IT Support Overview"
+This document outlines the custom reporting and dashboard setup in our JIRA Service Desk implementation.
 
-2. Add Gadgets to Dashboard
-   - Created vs. Resolved Issues (Line Chart)
-   - Issue Statistics
-   - Average Time in Status
-   - SLA Compliance
-   - Pie Chart of Issue Types
+## Main Dashboard: IT Support Overview
 
-3. Create Filters for Specific Reports
-   - High Priority Unresolved Issues
-   - Issues Approaching SLA Breach
-   - Recently Resolved Issues
+![IT Support Overview Dashboard](images/it-support-dashboard.png)
 
-4. Set up Automated Reports
-   - Go to System > Scheduled Jobs
-   - Set up weekly email reports for key metrics
+### Gadgets Included:
+1. Created vs. Resolved Issues (Line Chart)
+   - Purpose: Track issue resolution rate over time
+   - Configuration: X-axis: Date, Y-axis: Issue Count, Lines: Created and Resolved
 
-5. Create a Custom Report
-   - Use JIRA Query Language (JQL) to create a complex custom report
-   - Example: Issues resolved within SLA grouped by priority and issue type
+2. Issue Statistics
+   - Purpose: Quick overview of current ticket status
+   - Configuration: Group by Status, Calculate for Last 7 days
+
+3. Average Time in Status
+   - Purpose: Identify bottlenecks in the support process
+   - Configuration: All statuses, Last 30 days
+
+4. SLA Compliance
+   - Purpose: Monitor adherence to service level agreements
+   - Configuration: All SLA metrics, Pie chart view
+
+5. Pie Chart of Issue Types
+   - Purpose: Understand distribution of different support requests
+   - Configuration: Group by Issue Type, Last 30 days
+
+## Custom Reports
+
+### 1. High Priority Unresolved Issues
+- JQL: priority in (High, Highest) AND resolution = Unresolved ORDER BY created DESC
+- Purpose: Focus on critical open issues
+
+### 2. Issues Approaching SLA Breach
+- JQL: "Time to Resolution" < 2h AND resolution = Unresolved
+- Purpose: Proactively manage SLA compliance
+
+### 3. Weekly Resolution Rate
+- SQL Query:
+  ```sql
+  SELECT 
+    DATE_TRUNC('week', created) as week,
+    COUNT(*) as created,
+    SUM(CASE WHEN resolved IS NOT NULL THEN 1 ELSE 0 END) as resolved
+  FROM jiraissue
+  WHERE project = 10000 -- IT Support project ID
+  GROUP BY DATE_TRUNC('week', created)
+  ORDER BY week DESC
+  LIMIT 12
 
 
