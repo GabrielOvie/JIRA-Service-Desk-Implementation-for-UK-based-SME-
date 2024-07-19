@@ -22,8 +22,8 @@
 4. Start the VM and install Ubuntu Server
 
 ## JIRA Installation
-1. Update Ubuntu: `sudo apt update && sudo apt upgrade -y`
-2. Install Java: `sudo apt install openjdk-11-jdk -y`
+1. Update Ubuntu: sudo apt update && sudo apt upgrade
+2. Install Java: sudo apt install openjdk-11-jdk -y
 3. Download JIRA Service Desk: [provide link to Atlassian download page]
 4. Install JIRA: [provide installation steps]
 
