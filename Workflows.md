@@ -79,7 +79,8 @@ This document outlines the custom workflows created for our JIRA Service Desk im
 - Issue is unresolved
 - Priority is High or higher
 - Created date is more than 2 days ago
-**Actions:**
+  
+*Actions:*
 - Increase priority by one level (if not already Highest)
 - Add comment: "This high-priority issue has been open for over 2 days and has been escalated."
 - Send email notification to IT manager
@@ -90,7 +91,8 @@ This document outlines the custom workflows created for our JIRA Service Desk im
 **Conditions:**
 - Status is "Awaiting Information"
 - Last updated more than 7 days ago
-**Actions:**
+  
+*Actions:*
 - Transition issue to "Resolved"
 - Add comment: "This issue has been automatically resolved due to inactivity. Please reopen if the problem persists."
 - Send email notification to the reporter
