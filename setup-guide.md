@@ -28,5 +28,66 @@
 4. Install JIRA
 
 ## Database Configuration
+1. Install MySQL: sudo apt install mysql-server -y
+2. Secure MySQL installation: sudo mysql_secure_installation
+3. Create JIRA Db --- sudo mysql -u root -p
+CREATE DATABASE jiradb CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+CREATE USER 'jirauser'@'localhost' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON jiradb.* TO 'jirauser'@'localhost';
+FLUSH PRIVILEGES;
+EXIT
+
+## JIRA Configuration
+
+1. Access JIRA setup wizard through your web browser: `http://your_server_ip:8080`
+2. Choose "I'll set it up myself"
+3. Configure your database:
+- Database type: MySQL
+- Hostname: localhost
+- Port: 3306
+- Database: jiradb
+- Username: jirauser
+- Password: your_password
+4. Set up application properties:
+- Application Title: [Your Company] IT Support
+- Mode: Private
+- Base URL: http://your_server_ip:8080
+5. Set up administrator account
+6. Set up email notifications (we'll use Postfix in the next section)
+7. Finish setup and log in to JIRA
 
 ## Email Integration Setup
+1. Install Postfix:
+2. 2. Configure Postfix as a local SMTP server
+3. In JIRA, go to Administration > System > Mail Server
+4. Configure with the following settings:
+- Name: Local Postfix
+- From address: jira@your_domain.com
+- Email Prefix: [JIRA]
+- Protocol: SMTP
+- Host Name: localhost
+- SMTP Port: 25
+5. Test the email configuration
+
+## Service Desk Project Setup
+
+1. Go to Projects > Create Project
+2. Choose "IT Service Management" as the project template
+3. Name your project "IT Support"
+4. Configure request types:
+- Hardware Issue
+- Software Problem
+- Network Access
+- General Inquiry
+5. Set up SLAs for each request type
+6. Configure the customer portal
+
+## Security and Performance Tuning
+
+1. Enable HTTPS:
+- Install Certbot: `sudo apt install certbot python3-certbot-apache -y`
+- Obtain SSL certificate: `sudo certbot --apache -d your_domain.com`
+2. Adjust Java heap settings in `setenv.sh`
+3. Optimize database connection pool in `dbconfig.xml`
+4. Set up regular backups:
+
