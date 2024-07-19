@@ -15,7 +15,7 @@ To create a functional JIRA Service Desk environment in a virtual lab, demonstra
 ## Project Phases
 1. [Virtual Environment Setup](setup-guide.md)
 2. [JIRA Installation and Configuration](#setup-guide.md)
-3. [Workflow and Automation](#workflow-and-automation)
+3. [Workflow and Automation](Workflows.md)
 4. [Reporting and Dashboards](#reporting-and-dashboards)
 5. [Testing and Demonstration](#testing-and-demonstration)
 
