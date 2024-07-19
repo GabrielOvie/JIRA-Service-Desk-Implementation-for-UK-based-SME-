@@ -13,11 +13,10 @@ To create a functional JIRA Service Desk environment in a virtual lab, demonstra
 - Postfix (for email simulation)
 
 ## Project Phases
-1. [Virtual Environment Setup](setup-guide.md)
-2. [JIRA Installation and Configuration](#setup-guide.md)
-3. [Workflow and Automation](Workflows.md)
-4. [Reporting and Dashboards](Reporting-and-Dashboards.md)
-5. [Testing and Demonstration](Testing-and-Demonstratio.md)
+1. [JIRA Installation and Configuration](#setup-guide.md)
+2. [Workflow and Automation](Workflows.md)
+3. [Reporting and Dashboards](Reporting-and-Dashboards.md)
+4. [Testing and Demonstration](Testing-and-Demonstratio.md)
 
 ## Skills Demonstrated
 - Virtual machine configuration
