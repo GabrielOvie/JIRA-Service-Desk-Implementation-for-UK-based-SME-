@@ -68,7 +68,7 @@ This document outlines the custom workflows created for our JIRA Service Desk im
 - Project is "IT Support"
 - Issue Type is "Hardware Request"
 - Summary or description contains keywords (e.g., "laptop", "monitor", "keyboard")
-**Actions:** 
+*Actions:* 
 - Set Component based on detected keywords
 - Add label "hardware-request"
 
@@ -103,7 +103,7 @@ This document outlines the custom workflows created for our JIRA Service Desk im
 **Conditions:**
 - Project is "User Onboarding"
 - Issue Type is "New Hire"
-**Actions:**
+*Actions:*
 - Create subtasks for each onboarding step (e.g., "Create Email Account", "Prepare Workstation", "Schedule Orientation")
 - Assign subtasks to appropriate team members
 - Set due dates for each subtask relative to the start date
