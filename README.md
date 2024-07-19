@@ -26,6 +26,6 @@ To create a functional JIRA Service Desk environment in a virtual lab, demonstra
 - IT support process design
 - Technical documentation
 
-## [View Demo Video](#) (Add link
+## [View Demo Video](#) 
 
 ## [Detailed Setup Guide](setup-guide.md)
