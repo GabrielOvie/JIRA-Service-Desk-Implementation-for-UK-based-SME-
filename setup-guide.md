@@ -32,8 +32,8 @@
 2. Secure MySQL installation: sudo mysql_secure_installation
 3. Create JIRA Db --- sudo mysql -u root -p
 CREATE DATABASE jiradb CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
-CREATE USER 'jirauser'@'localhost' IDENTIFIED BY 'your_password';
-GRANT ALL PRIVILEGES ON jiradb.* TO 'jirauser'@'localhost';
+CREATE USER jirauser@localhost IDENTIFIED BY your_password;
+GRANT ALL PRIVILEGES ON jiradb.* TO jirauser@localhost;
 FLUSH PRIVILEGES;
 EXIT
 
