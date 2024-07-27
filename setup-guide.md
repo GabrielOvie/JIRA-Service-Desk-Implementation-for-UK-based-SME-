@@ -39,7 +39,7 @@ EXIT
 
 ## JIRA Configuration
 
-1. Access JIRA setup wizard through your web browser: `http://your_server_ip:8080`
+1. Access JIRA setup wizard through your web browser: http://your_server_ip:8080
 2. Choose "I'll set it up myself"
 3. Configure your database:
 - Database type: MySQL
@@ -85,9 +85,9 @@ EXIT
 ## Security and Performance Tuning
 
 1. Enable HTTPS:
-- Install Certbot: `sudo apt install certbot python3-certbot-apache -y`
-- Obtain SSL certificate: `sudo certbot --apache -d your_domain.com`
-2. Adjust Java heap settings in `setenv.sh`
-3. Optimize database connection pool in `dbconfig.xml`
+- Install Certbot: sudo apt install certbot python3-certbot-apache -y
+- Obtain SSL certificate: sudo certbot --apache -d your_domain.com
+2. Adjust Java heap settings in setenv.sh
+3. Optimize database connection pool in dbconfig.xml
 4. Set up regular backups:
 
